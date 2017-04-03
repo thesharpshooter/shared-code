@@ -6,8 +6,6 @@ function expEuler(f,u0,tspan,steps = 1000)
 	u = u0
 	nsteps = steps
 	h = tmax/nsteps		#step size
-	Size = size(A)
-	I = eye(Size[1])	#Identity matrix
 	phi1 = ((expm(h*A)-I)/A)
 	for k in 1:nsteps
   		u += phi1*(A*u + g(t,u))
