@@ -10,7 +10,6 @@ tmax = 10.0;
 h = tmax/nsteps;
 u = u0;
 t = 0
-I = eye(11)
 u = zeros(11);u[6]=1
 phi1 = ((expm(h*A)-I)/A)
 for k in 1:nsteps
